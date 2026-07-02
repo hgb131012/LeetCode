@@ -1,0 +1,20 @@
+/**
+ * @param {number[]} nums
+ */
+var NumArray = function(nums) {
+    this.nums = nums;
+};
+/** 
+ * @param {number} left 
+ * @param {number} right
+ * @return {number}
+ */
+NumArray.prototype.sumRange = function(left, right) {
+    const numbers = this.nums.slice(left, right + 1);
+    return numbers.reduce((sum, num) => sum + num);
+};
+/** 
+ * Your NumArray object will be instantiated and called as such:
+ * var obj = new NumArray(nums)
+ * var param_1 = obj.sumRange(left,right)
+ */
